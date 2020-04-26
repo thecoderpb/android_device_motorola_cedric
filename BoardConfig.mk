@@ -180,8 +180,8 @@ DEVICE_MATRIX_FILE   := $(LOCAL_PATH)/compatibility_matrix.xml
 
 # Init
 TARGET_PLATFORM_DEVICE_BASE := /devices/soc/
-TARGET_INIT_VENDOR_LIB := libinit_garlic
-TARGET_LIBINIT_DEFINES_FILE := device/yu/garlic/init/init_garlic.cpp
+TARGET_INIT_VENDOR_LIB := libinit_cedric
+TARGET_LIBINIT_DEFINES_FILE := device/motorola/cedric/init/init_cedric.cpp
 
 # Keymaster
 TARGET_PROVIDES_KEYMASTER := true
@@ -257,4 +257,4 @@ WIFI_DRIVER_FW_PATH_AP := "ap"
 WIFI_DRIVER_FW_PATH_STA := "sta"
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 # Inherit from the proprietary version
--include vendor/yu/garlic/BoardConfigVendor.mk
+-include vendor/motorola/cedric/BoardConfigVendor.mk

@@ -23,11 +23,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 #$(call inherit-product, frameworks/native/build/phone-xhdpi-2048-hwui-memory.mk)
 
-#TODO:Adding vendor files
-#$(call inherit-product, vendor/yu/garlic/garlic-vendor.mk)
+
+$(call inherit-product, vendor/motorola/cedric/cedric-vendor.mk)
 
 # Overlays
-#TODO:Add overlay folder
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 # Screen density

@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Copyright (C) 2018 The LineageOS Project
+# Copyright (C) 2016 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -20,7 +20,7 @@ set -e
 DEVICE=cedric
 VENDOR=motorola
 
-# Load extract_utils and do some sanity checks
+# Load extractutils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
 if [[ ! -d "$MY_DIR" ]]; then MY_DIR="$PWD"; fi
 
@@ -34,25 +34,24 @@ fi
 . "$HELPER"
 
 if [ $# -eq 0 ]; then
-  SRC=adb
+    SRC=adb
 else
-  if [ $# -eq 1 ]; then
-    SRC=$1
-  else
-    echo "$0: bad number of arguments"
-    echo ""
-    echo "usage: $0 [PATH_TO_EXPANDED_ROM]"
-    echo ""
-    echo "If PATH_TO_EXPANDED_ROM is not specified, blobs will be extracted from"
-    echo "the device using adb pull."
-    exit 1
-  fi
+    if [ $# -eq 1 ]; then
+        SRC=$1
+    else
+        echo "$0: bad number of arguments"
+        echo ""
+        echo "usage: $0 [PATH_TO_EXPANDED_ROM]"
+        echo ""
+        echo "If PATH_TO_EXPANDED_ROM is not specified, blobs will be extracted from"
+        echo "the device using adb pull."
+        exit 1
+    fi
 fi
 
 # Initialize the helper
 setup_vendor "$DEVICE" "$VENDOR" "$LINEAGE_ROOT"
 
 extract "$MY_DIR"/proprietary-files.txt "$SRC"
-extract "$MY_DIR"/proprietary-files-qc.txt "$SRC"
 
 "$MY_DIR"/setup-makefiles.sh

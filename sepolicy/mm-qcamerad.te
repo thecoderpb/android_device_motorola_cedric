@@ -1,2 +1,1 @@
-#============= mm-qcamerad ==============
-allow mm-qcamerad sysfs:file r_file_perms;
+allow mm-qcamerad camera_prop:property_service set;

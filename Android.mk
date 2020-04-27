@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2017 YU Community OS Team
+# Copyright (C) 2017 Motorola LLC
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -20,20 +20,18 @@ LOCAL_PATH := $(call my-dir)
 
 ifneq ($(filter cedric,$(TARGET_DEVICE)),)
 include $(call all-makefiles-under,$(LOCAL_PATH))
-
 include device/motorola/cedric/tftp.mk
 
 #include $(CLEAR_VARS)
 #IMS_LIBS := libimscamera_jni.so libimsmedia_jni.so
 #
-#IMS_SYMLINKS := $(addprefix $(TARGET_OUT_APPS)/ims/lib/arm64/,$(notdir $(IMS_LIBS)))
+#IMS_SYMLINKS := $(addprefix $(TARGET_OUT)/priv-app/ims/lib/arm64/,$(notdir $(IMS_LIBS)))
 #$(IMS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 #	@echo "IMS lib link: $@"
 #	@mkdir -p $(dir $@)
 #	@rm -rf $@
-#	$(hide) ln -sf /system/lib64/$(notdir $@) $@
-
+#	$(hide) ln -sf /system/vendor/lib64/$(notdir $@) $@
+#
 #ALL_DEFAULT_INSTALLED_MODULES += $(IMS_SYMLINKS)
-
 
 endif

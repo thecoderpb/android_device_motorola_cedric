@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2017 YU Community OS Team
+# Copyright (C) 2017 Motorola LLC
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -21,9 +21,7 @@ include $(CLEAR_VARS)
 
 LOCAL_MODULE_TAGS := optional
 LOCAL_C_INCLUDES := system/core/init
-LOCAL_C_INCLUDES += external/selinux/libselinux/include
 LOCAL_CFLAGS := -Wall -DANDROID_TARGET=\"$(TARGET_BOARD_PLATFORM)\"
 LOCAL_SRC_FILES := init_cedric.cpp
 LOCAL_MODULE := libinit_cedric
-LOCAL_STATIC_LIBRARIES := libbase
 include $(BUILD_STATIC_LIBRARY)

@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2017 YU Community OS Team
+# Copyright (C) 2017 Motorola LLC
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -15,13 +15,12 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 
-TODO:
-#PRODUCT_COPY_FILES += \
-#    device/yu/garlic/recovery/twrp.fstab:recovery/root/etc/twrp.fstab
+PRODUCT_COPY_FILES += \
+    device/motorol/cedric/recovery/twrp.fstab:recovery/root/etc/twrp.fstab
 
 BOARD_SUPPRESS_SECURE_ERASE := true
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
-RECOVERY_SDCARD_ON_DATA := true 
+RECOVERY_SDCARD_ON_DATA := true
 RECOVERY_VARIANT := twrp
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 TARGET_RECOVERY_QCOM_RTC_FIX := true

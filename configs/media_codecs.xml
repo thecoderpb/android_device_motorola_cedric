@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<!-- Copyright (C) 2016-2018 The Linux Foundation. All rights reserved.
+<!-- Copyright (C) 2013 The Android Open Source Project
+     Copyright (C) 2016 The Linux Foundation. All rights reserved.
      Not a contribution.
-
-     Copyright (C) 2013 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -152,6 +151,8 @@ Only the three quirks included above are recognized at this point:
         </MediaCodec>
     </Encoders>
     <Decoders>
+        <!-- Audio Software  -->
+        <MediaCodec name="OMX.qti.audio.decoder.flac" type="audio/flac" />
         <!-- Video Hardware  -->
         <MediaCodec name="OMX.qcom.video.decoder.avc" type="video/avc" >
             <Quirk name="requires-allocate-on-input-ports" />
@@ -254,5 +255,5 @@ Only the three quirks included above are recognized at this point:
             <Limit name="concurrent-instances" max="16" />
         </MediaCodec>
     </Decoders>
-    <Include href="media_codecs_google_video_le.xml" />
+    <Include href="media_codecs_google_video.xml" />
 </MediaCodecs>

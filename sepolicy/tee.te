@@ -1,5 +1,6 @@
-#============= tee ==============
-allow tee goodix_data_file:dir r_dir_perms;
-allow tee goodix_data_file:file r_file_perms;
-allow tee fingerprintd_data_file:dir write;
-allow tee fingerprintd_data_file:dir add_name;
+# /data/goodix labeling
+type_transition tee system_data_file:{ dir file } gx_fpd_data_file;
+
+allow tee gx_fpd_data_file:dir create_dir_perms;
+allow tee gx_fpd_data_file:file create_file_perms;
+allow tee system_data_file:dir create_dir_perms;
